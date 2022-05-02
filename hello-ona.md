@@ -12,3 +12,5 @@ library(tidyverse)
 install.packages(“igraph”)
 
 library(igraph)
+
+“Hello, network!”
