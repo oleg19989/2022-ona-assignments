@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 Exercise 0
 ================
 Oleg Kartavtsev
@@ -52,5 +57,9 @@ library(igraph)
     ## The following object is masked from 'package:base':
     ## 
     ##     union
+
+``` r
+tinytex::install_tinytex()
+```
 
 “Hello, network!”
