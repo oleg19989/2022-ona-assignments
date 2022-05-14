@@ -72,9 +72,9 @@ fakebook <- graph_from_data_frame(dat, directed=FALSE)
 fakebook
 ```
 
-    ## IGRAPH 7927fd2 UN-- 10 17 -- 
+    ## IGRAPH bc352a5 UN-- 10 17 -- 
     ## + attr: name (v/c)
-    ## + edges from 7927fd2 (vertex names):
+    ## + edges from bc352a5 (vertex names):
     ##  [1] 1--2 2--A A--B A--C B--6 B--D B--C B--3 C--D C--3 C--4 6--5 6--D D--5 D--3
     ## [16] 3--4 3--5
 
