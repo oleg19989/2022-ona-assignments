@@ -72,9 +72,9 @@ fakebook <- graph_from_data_frame(dat, directed=FALSE)
 fakebook
 ```
 
-    ## IGRAPH 1215d60 UN-- 10 17 -- 
+    ## IGRAPH 821f19a UN-- 10 17 -- 
     ## + attr: name (v/c)
-    ## + edges from 1215d60 (vertex names):
+    ## + edges from 821f19a (vertex names):
     ##  [1] 1--2 2--A A--B A--C B--6 B--D B--C B--3 C--D C--3 C--4 6--5 6--D D--5 D--3
     ## [16] 3--4 3--5
 
@@ -101,7 +101,7 @@ plot(fakebook, layout=layout.fruchterman.reingold,
     vertex.color = "turquoise")
 ```
 
-![](ExerciseTwo_files/figure-gfm/plot%201-1.png)<!-- -->
+![](ExerciseTwo_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 From the graph above (degree centrality), it looks like seats B, C and D
 would be the best ones, directly connecting with the most nodes (or
@@ -132,7 +132,7 @@ plot(fakebook, layout=layout.fruchterman.reingold,
     vertex.color = "turquoise")
 ```
 
-![](ExerciseTwo_files/figure-gfm/plot%202-1.png)<!-- -->
+![](ExerciseTwo_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 For betweenness centrality, A seems to be the best choice (14), followed
 by B (9) and C (8.6), as they are on the highest number of shortest
@@ -163,7 +163,7 @@ plot(fakebook, layout=layout.fruchterman.reingold,
     vertex.color = "turquoise")
 ```
 
-![](ExerciseTwo_files/figure-gfm/plot%203-1.png)<!-- -->
+![](ExerciseTwo_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 For closeness centrality, B and C seem to be the best options (0.07
 each), with the lowest average distance to other nodes
@@ -183,7 +183,7 @@ plot(fakebook, layout=layout.fruchterman.reingold,
     vertex.color = "turquoise")
 ```
 
-![](ExerciseTwo_files/figure-gfm/eigenvector%20centrality-1.png)<!-- -->
+![](ExerciseTwo_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 For eigenvector centrality, D is a top choice (1!) followed by B (0.97)
 and C (0.94), as they are connected to the biggest number of most
@@ -206,7 +206,7 @@ plot(fakebook, layout=layout.fruchterman.reingold,
     vertex.color = "turquoise")
 ```
 
-![](ExerciseTwo_files/figure-gfm/bonacich%20centrality-1.png)<!-- -->
+![](ExerciseTwo_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 According to Bonacich Centrality, seats A (0.11), B (0.09) and C (0.08)
 are the best options
@@ -226,7 +226,7 @@ plot(fakebook, layout=layout.fruchterman.reingold,
     vertex.color = "turquoise")
 ```
 
-![](ExerciseTwo_files/figure-gfm/Page%20Rank-1.png)<!-- -->
+![](ExerciseTwo_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 According to Page Rank, C (0.1363), B (0.1346) and D (0.1311) are all
 good choices, as they are the most commonly encountered (memorable)

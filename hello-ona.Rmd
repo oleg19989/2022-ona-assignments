@@ -1,0 +1,23 @@
+---
+title: "Exercise 0"
+author: "Oleg Kartavtsev"
+date: "5/2/2022"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+library(tidyverse)
+
+library(igraph)
+```
+
+```{r}
+tinytex::install_tinytex()
+```
+
+“Hello, network!”
