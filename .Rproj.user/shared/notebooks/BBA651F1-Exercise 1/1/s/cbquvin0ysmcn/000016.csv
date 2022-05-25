@@ -1,0 +1,4 @@
+"0","ggraph(graph, layout = ""graphopt"") + "
+"0","  geom_edge_link(aes(color = Company), show.legend = FALSE) + "
+"0","  geom_node_point()+"
+"0","  theme_graph()"

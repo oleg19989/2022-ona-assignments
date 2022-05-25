@@ -1,0 +1,5 @@
+"0","#combining 2 datasets together (for plotting purposes)"
+"0","library(dplyr)"
+"0","wg163$workgroup <- c('wg_163')"
+"0","wg172$workgroup <- c('wg_172')"
+"0","combined <- union(x=wg163,y=wg172)"

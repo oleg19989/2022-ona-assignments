@@ -1,0 +1,5 @@
+"0","Degree <- degree(graph1, v=V(graph1))"
+"0","V(graph1)$size = Degree"
+"0","ggraph(graph1, layout=""kk"") +"
+"0","  geom_edge_link()+"
+"0","  geom_node_point(aes(size=size, color=color), show.legend=T)"

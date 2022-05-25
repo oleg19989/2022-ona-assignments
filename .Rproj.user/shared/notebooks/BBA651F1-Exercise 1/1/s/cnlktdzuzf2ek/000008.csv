@@ -1,0 +1,2 @@
+"0",""
+"0","graph <- tbl_graph(edges = edges, nodes=nodes, directed = FALSE)"

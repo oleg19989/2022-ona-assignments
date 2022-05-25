@@ -1,0 +1,5 @@
+"0","#plotting the directed graph"
+"0","graph1 = graph_from_data_frame(d=merged, vertices=nodes, directed=TRUE)"
+"0",""
+"0","V(graph1)$color = nodes$art_unit"
+"0",""

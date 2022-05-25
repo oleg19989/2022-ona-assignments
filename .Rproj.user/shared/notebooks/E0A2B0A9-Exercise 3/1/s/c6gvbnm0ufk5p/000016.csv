@@ -1,0 +1,1 @@
+"0","ggplot(combined, aes(workgroup, ..count..)) + geom_bar(aes(fill = gender), position = ""dodge"")"

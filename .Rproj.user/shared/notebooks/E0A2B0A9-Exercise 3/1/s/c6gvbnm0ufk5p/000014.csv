@@ -1,0 +1,3 @@
+"0","#plot gender and race across the workgroups"
+"0","library(ggplot2)"
+"0","ggplot(combined, aes(workgroup, ..count..)) + geom_bar(aes(fill = race), position = ""dodge"")"

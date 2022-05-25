@@ -1,0 +1,49 @@
+## Import data from CSV file, inside "" is the location of your CSV file in your computer. 
+Data <- read.csv("C:/Users/oleg1/Desktop/McGill/Classes/Revenue Management/Homework 1/singleitemSKU88.csv")
+
+##Add seasonal factor to the data 
+Data$Week_factor <-  as.factor(rep(rep(seq(1,13),each=4),3))
+
+##splitting for train-test
+# first 2 years = week 1 through 104
+train <- Data[row.names(Data) %in% 1:104, ]
+# remaining year = week 105 onwards
+test <- Data[row.names(Data) %in% 105:nrow(Data), ]
+
+# 2) Estimating parameters for models (a) and (b)
+#model (a)
+modelA <- lm(log(St) ~ Week_factor + Week + log(Price), data=train)
+#getting the summary
+summary(modelA)
+#generating predictions
+predA <- predict(modelA, newdata = test)
+rssA <- sum((predA - log(test$St))^2)  
+tssA <- sum((log(test$St) - mean(log(test$St)))^2)  
+#getting R-squared and MAPE
+r2A <- 1 - rssA/tssA
+mapeA<-mean(abs((log(test$St)-predA)/log(test$St))*100) 
+print(mapeA)
+print(r2A)
+
+#model (b)
+modelB <- lm(log(St) ~ Week_factor + Week + log(Price) + log(Price_1) + log(Price_2), data=train)
+#getting the summary
+summary(modelB)
+#generating predictions
+predB <- predict(modelB, newdata = test)
+rssB <- sum((predB - log(test$St))^2)  
+tssB <- sum((log(test$St) - mean(log(test$St)))^2)  
+#getting R-squared and MAPE
+r2B <- 1 - rssB/tssB
+mapeB <-mean(abs((log(test$St)-predB)/log(test$St))*100) 
+print(mapeB)
+print(r2B)
+
+# 4) Computing the values of the predicted demand for models (a) and (b)
+newdata4 <-data.frame(Week_factor = "2", Week = 7, Price = 1, Price_1 = 0.8, Price_2 = 0.8)
+#generating new demand values
+predA4 <- predict(modelA, newdata = newdata4)
+predB4 <- predict(modelB, newdata = newdata4)
+#printing out new demand values
+print(predA4)
+print(predB4)
