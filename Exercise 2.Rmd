@@ -2,7 +2,7 @@
 title: "Exercise 2"
 author: "Oleg Kartavtsev"
 date: "5/12/2022"
-output: github_document
+output: pdf_document
 self_contained: false
 ---
 
